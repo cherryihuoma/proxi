@@ -79,3 +79,14 @@ L.marker([providerData.lat, providerData.lng])
   marker = null;
 }
 map.closePopup();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const map = L.map('map').setView([6.5244, 3.3792], 12);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+});
+
+
