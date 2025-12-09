@@ -3,6 +3,11 @@ window.addEventListener('scroll', () => {
   document.querySelector('header')
     .classList.toggle('scrolled', window.scrollY > 50);
 });
+window.addEventListener("load", () => {
+  const splash = document.getElementById("splash");
+  splash.style.display = "none";
+});
+
 
 // ---------------- PROVIDERS DATA ----------------
 let providers = [
