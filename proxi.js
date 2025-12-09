@@ -3,10 +3,85 @@ window.addEventListener('scroll', () => {
   document.querySelector('header')
     .classList.toggle('scrolled', window.scrollY > 50);
 });
-window.addEventListener("load", () => {
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  // Change hamburger icon to X when open
+  hamburger.innerHTML = navLinks.classList.contains('active') ? '&times;' : '&#9776;';
+});
+
+function initMap() {
+  const map = L.map('map').setView([6.5244, 3.3792], 12);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Add a marker for testing
+  L.marker([6.5244, 3.3792]).addTo(map)
+    .bindPopup("You are here")
+    .openPopup();
+}
+
   const splash = document.getElementById("splash");
   splash.style.display = "none";
+window.addEventListener("load", () => {
+  const splash = document.getElementById("splash");
+
+  // Fade out smoothly
+  splash.classList.add("hidden");
+
+  // Optional: remove from DOM after fade
+  setTimeout(() => {
+    splash.style.display = "none";
+  }, 500);
+
+  // Initialize map AFTER splash
+  initMap();
 });
+
+function initMap() {
+  const map = L.map('map').setView([6.5244, 3.3792], 12);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Add a marker for testing
+  L.marker([6.5244, 3.3792]).addTo(map)
+    .bindPopup("You are here")
+    .openPopup();
+}
+
+window.addEventListener("load", () => {
+  const splash = document.getElementById("splash");
+
+  // Fade out smoothly
+  splash.classList.add("hidden");
+
+  // Optional: remove from DOM after fade
+  setTimeout(() => {
+    splash.style.display = "none";
+  }, 500);
+
+  // Initialize map AFTER splash
+  initMap();
+});
+
+function initMap() {
+  const map = L.map('map').setView([6.5244, 3.3792], 12);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Add a marker for testing
+  L.marker([6.5244, 3.3792]).addTo(map)
+    .bindPopup("You are here")
+    .openPopup();
+}
 
 
 // ---------------- PROVIDERS DATA ----------------
