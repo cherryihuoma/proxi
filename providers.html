@@ -9,7 +9,6 @@
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-  <!-- Main CSS -->
   <link rel="stylesheet" href="proxi.css">
 </head>
 
@@ -24,13 +23,11 @@
     </nav>
   </header>
 
-  <!-- Search -->
   <div class="search-filter">
     <input type="text" id="service-search" placeholder="Search for a service (e.g., Mechanic)">
     <button id="search-btn" class="btn-primary">Search</button>
   </div>
 
-  <!-- Filters -->
   <div class="filter-bar">
     <select id="service-filter" title="options">
       <option value="">All Services</option>
@@ -54,15 +51,12 @@
     <button id="apply-filters" class="btn-primary">Apply Filters</button>
   </div>
 
-  <!-- Providers Section -->
   <section class="providers-section">
     <h2>Providers Near You</h2>
 
     <div class="providers-container">
-      <!-- MAP (ONLY ONE) -->
       <div id="map"></div>
 
-      <!-- PROVIDER CARDS -->
       <div class="providers-grid" id="providers-grid">
         <!-- Injected by JS -->
       </div>
@@ -79,7 +73,6 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-  <!-- Main JS -->
   <script src="provider.js"></script>
 
 </body>
