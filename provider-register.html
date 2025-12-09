@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proxi — Become a Provider</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="proxi.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">Proxi</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="providers.html">Providers</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <section class="register-section">
+    <h2>Become a Provider</h2>
+
+    <form id="provider-form">
+      <input type="text" id="name" placeholder="Full Name" required />
+
+      <select id="service" required title="options">
+        <option value="">Select Service</option>
+        <option value="Mechanic">Mechanic</option>
+        <option value="Electrician">Electrician</option>
+        <option value="Plumber">Plumber</option>
+        <option value="Carpenter">Carpenter</option>
+        <option value="Cleaning">Cleaning</option>
+        <option value="Technician">Technician</option>
+      </select>
+
+      <input type="text" id="phone" placeholder="Phone Number" required />
+      <input type="text" id="whatsapp" placeholder="WhatsApp Number" required />
+
+      <p>Select your location on the map:</p>
+      <div id="map"></div>
+      <p>Latitude: <span id="lat">-</span>, Longitude: <span id="lng">-</span></p>
+
+      <button type="submit" class="btn-primary">Register</button>
+    </form>
+  </section>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="provider.js"></script>
+
+</body>
+
+</html>
