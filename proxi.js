@@ -12,6 +12,19 @@ hamburger.addEventListener('click', () => {
   hamburger.innerHTML = navLinks.classList.contains('active') ? '&times;' : '&#9776;';
 });
 
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+document.addEventListener("mousemove", (e) => {
+  document.querySelectorAll(".parallax").forEach(layer => {
+    const speed = layer.getAttribute("data-speed");
+    const x = (window.innerWidth - e.pageX * speed) / 100;
+    const y = (window.innerHeight - e.pageY * speed) / 100;
+    layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+  });
+});
+
 function initMap() {
   const map = L.map('map').setView([6.5244, 3.3792], 12);
 
