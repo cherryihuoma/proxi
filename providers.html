@@ -5,11 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quickaid — Providers Near You</title>
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
   <link rel="stylesheet" href="proxi.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
 <body>
@@ -18,7 +15,7 @@
     <div class="logo">Quickaid</div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="providers.html">Services</a>
+      <a href="#">Providers</a>
       <a href="provider-register.html">Become a Provider</a>
     </nav>
   </header>
@@ -29,7 +26,7 @@
   </div>
 
   <div class="filter-bar">
-    <select id="service-filter" title="options">
+    <select id="service-filter" title="text">
       <option value="">All Services</option>
       <option value="Mechanic">Mechanic</option>
       <option value="Electrician">Electrician</option>
@@ -41,7 +38,7 @@
 
     <input type="number" id="distance-filter" placeholder="Max distance (km)" min="1">
 
-    <select id="rating-filter" title="filter">
+    <select id="rating-filter"title="text">
       <option value="">Any Rating</option>
       <option value="5">5★</option>
       <option value="4">4★ & above</option>
@@ -53,28 +50,21 @@
 
   <section class="providers-section">
     <h2>Providers Near You</h2>
-
     <div class="providers-container">
       <div id="map"></div>
-
-      <div class="providers-grid" id="providers-grid">
-        <!-- Injected by JS -->
-      </div>
+      <div class="providers-grid" id="providers-grid"></div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="footer-content">
-      <div class="logo">Proxi</div>
+      <div class="logo">Quickaid</div>
       <p>Connecting you to trusted professionals near you.</p>
     </div>
   </footer>
 
-  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-  <script src="provider.js"></script>
-
+  <script src="proxi.js"></script>
 </body>
 
 </html>
