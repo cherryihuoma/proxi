@@ -1,91 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proxi - From Problem to solution</title>
+  <meta name="description" content="Quickaid connects you instantly with trusted professionals for home repairs, cleaning, electrical work, plumbing, and more. Get services near you quickly.">
+  <meta name="keywords" content="Quickaid, home services, local professionals, cleaning, plumbing, electrician, handyman, service near me">
+  <meta name="author" content="Quickaid">
+  <title>Quickaid - From Problem to Solution</title>
   <link rel="stylesheet" href="proxi.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
+
 <body>
 
-  <header class="header">
-    <nav class="navbar">
-      <div class="logo">Proxi</div>
-    
+  <!-- NAVBAR -->
+  <header class="header" data-aos="fade-down">
+    <nav class="navbar container">
+      <div class="logo">Quickaid</div>
+
       <div class="nav-links" id="nav-links">
-        <a href="index.html">Home</a>
-        <a href="providers.html">Find Providers</a>
-        <a href="provider-register.html">Become a Provider</a>
+        <a href="#index.html">Home</a>
+        <a href="#providers.html">Find Providers</a>
+        <a href="#provider-register.html">Become a Provider</a>
       </div>
-    
+
       <div class="hamburger" id="hamburger">&#9776;</div>
     </nav>
-
   </header>
 
-  <section class="hero">
-    <h1>From Problem To Solution</h1>
-    <p>Find Trusted Professionals near you for everyday task</p>
 
-    <div class="search-box">
-      <input type="text" placeholder="What Service do you need?">
-      <input type="text" placeholder="Your Location">
-      <button class="btn-primary">Find A Pro</button>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+
+    <div class="hero-content" data-aos="fade-right">
+      <h1 data-aos="fade-up" data-aos-delay="200">Get Help Anytime, Anywhere</h1>
+      <p data-aos="fade-up" data-aos-delay="350">
+        Connect instantly with trusted professionals near you for repairs, cleaning, installations, and everyday tasks.
+      </p>
+
+      <div class="hero-search" data-aos="zoom-in" data-aos-delay="500">
+        <input type="text" placeholder="Search for a service…">
+        <input type="text" placeholder="Enter your location">
+        <button class="btn-primary">Find a Pro</button>
+      </div>
+    </div>
+
+    <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+      <img src="https://i.pinimg.com/1200x/67/41/61/67416178cad26075b13d96779c59fe95.jpg" alt="Profile Illustration" class="float" class="parallax" data-speed="3" loading="lazy">
     </div>
   </section>
 
-  <section class="services">
-    <h2>Popular Services</h2>
+
+  <!-- POPULAR SERVICES -->
+  <section class="popular-services" data-aos="fade-up">
+    <h2>What You Can Get Done Instantly</h2>
+
+    <div class="service-cards">
+      <div class="service-item" data-aos="zoom-in">🧹 Home Cleaning</div>
+      <div class="service-item" data-aos="zoom-in" data-aos-delay="100">🔌 Electrical Repairs</div>
+      <div class="service-item" data-aos="zoom-in" data-aos-delay="200">🚰 Plumbing Services</div>
+      <div class="service-item" data-aos="zoom-in" data-aos-delay="300">🔧 Handyman</div>
+      <div class="service-item" data-aos="zoom-in" data-aos-delay="400">📦 Delivery & Errands</div>
+      <div class="service-item" data-aos="zoom-in" data-aos-delay="500">🛠️ AC & Appliance Repair</div>
+    </div>
+  </section>
+
+
+  <!-- POPULAR SERVICES #2 -->
+  <section class="services container">
+    <h2 class="section-title" data-aos="fade-up">Popular Services</h2>
 
     <div class="service-grid">
-      <div class="service-card">🔧 Mechanics</div>
-      <div class="service-card">⚡ Electricians</div>
-      <div class="service-card">🚰 Plumbers</div>
-      <div class="service-card">🧰 Technicians</div>
-      <div class="service-card">🧹 Cleaners</div>
-      <div class="service-card">🪚 Carpenters</div>
+      <div class="service-card" data-aos="fade-up">🔧 Mechanics</div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">⚡ Electricians</div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">🚰 Plumbers</div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">🧰 Technicians</div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400">🧹 Cleaners</div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="500">🪚 Carpenters</div>
     </div>
   </section>
 
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-choose" data-aos="fade-up">
+    <h2>Why Choose Quickaid?</h2>
+
+    <div class="why-grid">
+      <div class="why-box" data-aos="zoom-in">
+        <h3>✔ Verified Providers</h3>
+        <p>Every professional is vetted to guarantee reliability and trust.</p>
+      </div>
+      <div class="why-box" data-aos="zoom-in" data-aos-delay="150">
+        <h3>✔ Fast & Easy Booking</h3>
+        <p>Book services in minutes and get your task done quickly.</p>
+      </div>
+      <div class="why-box" data-aos="zoom-in" data-aos-delay="300">
+        <h3>✔ Affordable Pricing</h3>
+        <p>Transparent prices that fit your budget — no hidden fees.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" data-aos="fade-up">
+    <h2>What Users Are Saying</h2>
+
+    <div class="testimonials-grid">
+      <div class="testimonial" data-aos="fade-right">
+        <p>“Quickaid helped me get an electrician in less than 20 minutes. Super fast!”</p>
+        <h4>- Sarah K.</h4>
+      </div>
+      <div class="testimonial" data-aos="fade-up">
+        <p>“I love how affordable and convenient the service is. Highly recommended.”</p>
+        <h4>- Daniel O.</h4>
+      </div>
+      <div class="testimonial" data-aos="fade-left">
+        <p>“Cleaners came on time and did an amazing job. 5 stars!”</p>
+        <h4>- Rita B.</h4>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HOW IT WORKS -->
   <section class="how-it-works">
-    <h2>How Proxi Works</h2>
-
-    <div class="steps">
-      <div class="step">
-        <span>1</span>
-        <h3>Search</h3>
-        <p>Choose the service you need near your location</p>
-      </div>
-
-      <div class="step">
-        <span>2</span>
-        <h3>Connect</h3>
-        <p>Chat or call trusted Professionals</p>
-      </div>
-
-      <div class="step">
-        <span>3</span>
-        <h3>Get it done</h3>
-        <p>Solve your problem quickly and stress-free</p>
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">How Quickaid Works</h2>
+      <div class="steps">
+        <div class="step" data-aos="fade-up">
+          <div class="steps">
+            <div class="step"> <span>1</span>
+              <h3>Search</h3>
+              <p>Choose the service you need near your location</p>
+            </div>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-delay="150">
+          <div class="step"> <span>2</span>
+            <h3>Connect</h3>
+            <p>Chat or call trusted professionals</p>
+          </div>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step"> <span>3</span>
+            <h3>Get it done</h3>
+            <p>Solve your problem quickly and stress-free</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="logo">Proxi</div>
-      <p>Connecting you to trusted professionals near you.</p>
 
-      <div class="footer-links">
-        <a href="#">Services</a>
-        <a href="#">Become a Provider</a>
-        <a href="#">Login</a>
-        <a href="#">Contact</a>
-      </div>
+  <!-- CTA -->
+  <section class="cta-section" data-aos="zoom-in">
+    <h2>Become a Provider on Quickaid</h2>
+    <p>Earn more by offering your services to customers near you.</p>
+    <a href="provider-register.html" class="btn-primary">Register Now</a>
+  </section>
 
-      <p class="copyright">&copy; 2025 Proxi. All rights reserved</p>
-    </div>
-  </footer>
+
+  <!-- AOS SCRIPT -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
   <script src="proxi.js"></script>
 </body>
+
 </html>
