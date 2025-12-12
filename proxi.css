@@ -1,8 +1,7 @@
-:root {
-  --primary: #4f46e5;
-  --accent: #22c55e;
-  --bg: #f9fafb;
-  --card: rgba(255, 255, 255, 0.85);
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 * {
   margin: 0;
@@ -11,6 +10,14 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -466,43 +473,155 @@ input {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 12px;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 5%;
+  gap: 40px;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin: 15px 0 30px;
+  color: #555;
+}
+
+.hero-search {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-search input {
+  padding: 14px;
+  flex: 1;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.hero-image img {
+  width: 420px;
+  border-radius: 20px;
+}
+
+/* POPULAR SERVICES */
+.popular-services {
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.popular-services h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.service-item {
+  padding: 25px 15px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.service-item:hover {
+  transform: translateY(-4px);
+}
+
+/* WHY CHOOSE US */
+.why-choose {
+  padding: 80px 5%;
+  background: #f3f6fa;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.why-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 80px 5%;
+  background: #f9fafc;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.testimonial {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* CTA */
+.cta-section {
+  padding: 60px 5%;
+  background: #2563eb;
+  color: white;
+  text-align: center;
+  border-radius: 0;
+}
+
+.cta-section h2 {
+  font-size: 36px;
+}
+
+.cta-section p {
+  margin: 10px 0 25px;
+}
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
   }
 
-  nav a {
-    margin: 0 10px;
+  50% {
+    transform: translateY(-12px);
   }
 
-  .hero {
-    margin: 60px auto;
-  }
-
-  .hero h1 {
-    font-size: 30px;
-  }
-
-  .hero p {
-    font-size: 15px;
-  }
-
-  .search-box input,
-  .btn-primary {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .providers-container {
-    flex-direction: column;
-  }
-
-  .providers-container #map {
-    height: 300px;
-  }
-
-  .providers-container .providers-grid {
-    width: 100%;
+  100% {
+    transform: translateY(0px);
   }
 }
